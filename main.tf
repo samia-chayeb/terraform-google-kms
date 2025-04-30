@@ -35,7 +35,7 @@ resource "google_kms_crypto_key" "key" {
   crypto_key_backend            = var.crypto_key_backend
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 
   destroy_scheduled_duration = var.key_destroy_scheduled_duration
